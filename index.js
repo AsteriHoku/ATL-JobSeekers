@@ -2,7 +2,7 @@ import { jobSeekers } from './assets/js/persons.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     new gridjs.Grid({
-        columns: ['Name', 'Email', 'LinkedIn URL', 'Field', 'Further Details'],
+        columns: ['Name', 'Email', 'LinkedIn', 'Field', 'Further Details'],
         data: jobSeekers.map(seeker => [
             seeker.Name,
             seeker.Email || 'N/A',
