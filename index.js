@@ -10,14 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 sort: false
             }, 
             'Field', 
-            'Further Details'
+            'Further Details',
+            'Date Added'
         ],
         data: jobSeekers.map(person => [
             person.Name,
             person.Email,
             gridjs.html(`<a href="${person.LinkedInUrl}" target="_blank">${person.LinkedInUrl}</a>`),
             person.Field,
-            person.AdditionalInfo
+            person.AdditionalInfo,
+            person.DateAdded
         ]),
         pagination: {
             enabled: true,
