@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'Field', 
             'Further Details'
         ],
-        data: jobSeekers.map(seeker => [
-            seeker.Name,
-            seeker.Email,
-            gridjs.html(`<a href="${seeker.LinkedInUrl}" target="_blank">${seeker.LinkedInUrl}</a>`),
-            seeker.Field,
-            seeker.AdditionalInfo
+        data: jobSeekers.map(person => [
+            person.Name,
+            person.Email,
+            gridjs.html(`<a href="${person.LinkedInUrl}" target="_blank">${person.LinkedInUrl}</a>`),
+            person.Field,
+            person.AdditionalInfo
         ]),
         pagination: {
             enabled: true,
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         search: true,
         sort: true,
-        resizable: true
+        resizable: true,
+        autoWidth: true
     }).render(document.getElementById('personsTable'));
 });
