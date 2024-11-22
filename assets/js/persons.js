@@ -64,7 +64,7 @@ export const jobSeekers = [
     },
     {
       Name: "Reina Lingle",
-      Email: "",
+      Email: "reina.lingle@gmail.com",
       LinkedInUrl: "https://www.linkedin.com/in/reinalingle/",
       Field: "Marketing Technology",
       AdditionalInfo: "Generative AI Strategist, 15 years Marketing Technology experience"

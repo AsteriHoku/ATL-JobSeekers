@@ -2,10 +2,19 @@ import { jobSeekers } from './assets/js/persons.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     new gridjs.Grid({
-        columns: ['Name', 'Email', 'LinkedIn', 'Field', 'Further Details'],
+        columns: [
+            'Name', 
+            'Email',
+            {
+                name: 'LinkedIn',
+                sort: false
+            }, 
+            'Field', 
+            'Further Details'
+        ],
         data: jobSeekers.map(seeker => [
             seeker.Name,
-            seeker.Email || 'N/A',
+            seeker.Email,
             gridjs.html(`<a href="${seeker.LinkedInUrl}" target="_blank">${seeker.LinkedInUrl}</a>`),
             seeker.Field,
             seeker.AdditionalInfo
